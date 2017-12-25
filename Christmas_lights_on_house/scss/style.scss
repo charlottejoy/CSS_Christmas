@@ -1,0 +1,289 @@
+$door:#384014;//think we can do better
+  $window: #6E4FFF;
+  $red: #FF4F88;
+  $yellow: #E0FF4F;
+  $green: #4FFF6E;
+  $blue: #4FE0FF;
+  $sill: #1C200A;
+  $building:grey;//grey;
+  $wreath: #88FF4F;
+$snow: #FBFFE9;
+$sky: #B6A7FF;// based off of windows
+  $thin: 1px solid black;
+$med: 2px solid black;
+$thick: 3px solid black;
+.body, html{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+ background: $sky;
+}
+
+.container{
+  position: absolute;
+  top: 0;
+  left: 0;
+width: 100%;
+  height: 100%;
+   display: flex;
+   justify-content: center;
+  align-items: center;
+  /* flex to center everything vertically and horizontally*/
+}
+.building{
+   background: $building;
+  position: absolute;
+ height: 50vh;
+  width: 50vw;
+/*top: 25vh;
+  left: 25vw;*/
+overflow: hidden;
+ border: $med;
+      * { box-sizing: border-box;}
+    
+}
+.top-wires{
+  .wire{ width: 20%;
+  height: 20%;
+  top: -10%;
+  }
+
+}
+.wire{
+  border: $med;
+  border-radius: 50%;
+ 
+position: absolute;
+  
+  
+  box-sizing: border-box;
+}
+#top-wire1{
+  left: 0;
+}
+#top-wire2{
+  left: 20%;
+
+}
+#top-wire3{
+  left: 40%;
+
+}
+#top-wire4{
+  left: 60%;
+
+}
+#top-wire5{
+  left: 80%;
+
+}
+
+
+.light{
+  position: absolute;
+  border-radius: 50%;
+   box-sizing: border-box;
+  border:$thin;
+  
+}
+.top-light{
+   
+   width: 20%;
+  height: 20%;
+}
+.bottom-light{
+  width: 10%;
+  height: 30%;
+}
+.light1{
+   @extend .light;
+   top:70%;
+  left: 0%;
+  background: $red;
+}
+
+
+
+.light2{
+     @extend .light;
+    top:85%;
+  left: 20%;
+  background: $yellow;
+}
+.light3{
+  @extend .light;
+     top:90%;
+  left: 40%;
+  background: $green;
+}
+.light4{
+  @extend .light;
+     top:85%;
+  left: 60%;
+  background: $blue;
+}
+.light5{
+   @extend .light;
+     top:70%;
+  left: 80%;
+  background: $yellow;
+}
+.green{
+    background: $green;
+}
+.yellow{
+    background: $yellow;
+}
+.blue{
+    background: $blue;
+}
+.red{
+    background: $red;
+}
+
+.window-row{
+  width: 100%;
+  height: 20%;
+  top: 20%;
+  position: absolute;
+ 
+}
+.window{
+  background: $window;
+  position: absolute;
+   border: $med;
+  box-sizing: border-box;
+}
+.small-window{
+  width: 12.5%;
+  height: 100%;
+  
+}
+#window1{
+  
+  left: 12.5%;
+}
+
+.med-window{
+ left: 37.5%;
+  width: 25%;
+  height: 100%;
+}
+#window3{
+ 
+  left: 75%;
+}
+
+.sill{
+  background: $sill;
+  width: 110%;
+  height: 10%;
+  position: absolute;
+  top: 95%;
+  left: -5%;
+  box-sizing: border-box;
+  border: $thin;
+}
+
+.door{
+  position: absolute;
+  left: 12.5%;
+  top: 60%;
+  height: 40%;
+  width: 19%;
+  background: $door;
+  border: $med;
+  * { box-sizing: border-box;}
+}
+.wreath{
+  border: $thin;
+  width: 50%;
+  height: 20%;
+  background: $wreath;
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+    display: flex;
+   justify-content: center;
+  align-items: center;
+  
+}
+.cut-out{
+  border: $thin;
+  background: $door;
+  width: 60%;
+  height:60%;
+  border-radius: 50%;
+}
+.knob{
+  background: $sill;
+  border-radius: 50%;
+  border: $thin;
+   width: 15%;
+  height: 6%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+}
+.big-window{
+  position: absolute;
+  height: 37.5%;
+  width: 47.5%;
+  top: 50%;
+  left: 40%;
+  .glass{
+    position: absolute;
+    width: 100%;
+    height:100%;
+     overflow: hidden;
+  }
+ 
+  .wire{
+     width: 50%;
+  height: 30%;
+  top: -15%;
+  }
+}
+.big-wire1{
+left: 0;  
+}
+.big-wire2{
+  left: 50%;
+}
+.ground{
+  border-top: $med;
+  width: 100%;
+  top: 70%;
+  background: $snow;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+@media(max-aspect-ratio: 1/1){
+  .building{
+  position: absolute;
+  height: 50vh;
+  width: 80vw;
+    
+ 
+}
+}
+@media(max-aspect-ratio: 1/2){
+  .building{
+  position: absolute;
+  height: 40vh;
+  width: 80vw;
+
+}
+}
+@media(min-aspect-ratio: 2/1){
+  .building{
+  position: absolute;
+  height: 60vh;
+  width: 60vw;
+ 
+}
+}

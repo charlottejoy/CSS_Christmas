@@ -1,0 +1,279 @@
+.body, html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #B6A7FF;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex to center everything vertically and horizontally*/
+}
+
+.building {
+  background: grey;
+  position: absolute;
+  height: 50vh;
+  width: 50vw;
+  /*top: 25vh;
+    left: 25vw;*/
+  overflow: hidden;
+  border: 2px solid black;
+}
+.building * {
+  box-sizing: border-box;
+}
+
+.top-wires .wire {
+  width: 20%;
+  height: 20%;
+  top: -10%;
+}
+
+.wire {
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+#top-wire1 {
+  left: 0;
+}
+
+#top-wire2 {
+  left: 20%;
+}
+
+#top-wire3 {
+  left: 40%;
+}
+
+#top-wire4 {
+  left: 60%;
+}
+
+#top-wire5 {
+  left: 80%;
+}
+
+.light, .light1, .light2, .light3, .light4, .light5 {
+  position: absolute;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.top-light {
+  width: 20%;
+  height: 20%;
+}
+
+.bottom-light {
+  width: 10%;
+  height: 30%;
+}
+
+.light1 {
+  top: 70%;
+  left: 0%;
+  background: #FF4F88;
+}
+
+.light2 {
+  top: 85%;
+  left: 20%;
+  background: #E0FF4F;
+}
+
+.light3 {
+  top: 90%;
+  left: 40%;
+  background: #4FFF6E;
+}
+
+.light4 {
+  top: 85%;
+  left: 60%;
+  background: #4FE0FF;
+}
+
+.light5 {
+  top: 70%;
+  left: 80%;
+  background: #E0FF4F;
+}
+
+.green {
+  background: #4FFF6E;
+}
+
+.yellow {
+  background: #E0FF4F;
+}
+
+.blue {
+  background: #4FE0FF;
+}
+
+.red {
+  background: #FF4F88;
+}
+
+.window-row {
+  width: 100%;
+  height: 20%;
+  top: 20%;
+  position: absolute;
+}
+
+.window {
+  background: #6E4FFF;
+  position: absolute;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+.small-window {
+  width: 12.5%;
+  height: 100%;
+}
+
+#window1 {
+  left: 12.5%;
+}
+
+.med-window {
+  left: 37.5%;
+  width: 25%;
+  height: 100%;
+}
+
+#window3 {
+  left: 75%;
+}
+
+.sill {
+  background: #1C200A;
+  width: 110%;
+  height: 10%;
+  position: absolute;
+  top: 95%;
+  left: -5%;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.door {
+  position: absolute;
+  left: 12.5%;
+  top: 60%;
+  height: 40%;
+  width: 19%;
+  background: #384014;
+  border: 2px solid black;
+}
+.door * {
+  box-sizing: border-box;
+}
+
+.wreath {
+  border: 1px solid black;
+  width: 50%;
+  height: 20%;
+  background: #88FF4F;
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cut-out {
+  border: 1px solid black;
+  background: #384014;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+}
+
+.knob {
+  background: #1C200A;
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 15%;
+  height: 6%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+}
+
+.big-window {
+  position: absolute;
+  height: 37.5%;
+  width: 47.5%;
+  top: 50%;
+  left: 40%;
+}
+.big-window .glass {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.big-window .wire {
+  width: 50%;
+  height: 30%;
+  top: -15%;
+}
+
+.big-wire1 {
+  left: 0;
+}
+
+.big-wire2 {
+  left: 50%;
+}
+
+.ground {
+  border-top: 2px solid black;
+  width: 100%;
+  top: 70%;
+  background: #FBFFE9;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+@media (max-aspect-ratio: 1 / 1) {
+  .building {
+    position: absolute;
+    height: 50vh;
+    width: 80vw;
+  }
+}
+@media (max-aspect-ratio: 1 / 2) {
+  .building {
+    position: absolute;
+    height: 40vh;
+    width: 80vw;
+  }
+}
+@media (min-aspect-ratio: 2 / 1) {
+  .building {
+    position: absolute;
+    height: 60vh;
+    width: 60vw;
+  }
+}
