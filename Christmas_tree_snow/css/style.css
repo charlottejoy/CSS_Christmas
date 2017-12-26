@@ -1,0 +1,14 @@
+.tree {
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: green;
+}
+
+.light {
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(120deg, blue 30%, lightblue 30%, lightblue 35%, blue 35%, blue 60%, navy 60%);
+}

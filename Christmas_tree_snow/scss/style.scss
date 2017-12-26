@@ -1,0 +1,21 @@
+//this will be the gradient style for all of the elements
+@mixin gradient-background($main, $shadow, $light) { 
+  background: linear-gradient(120deg, $main 30%, $light 30%, $light 35%,  $main 35%, $main 60%, $shadow 60%);
+}
+ //consider tree as absolute size (px), resized to fit screens. Interior= %, snow starts at 50%, tree centered with flex. 
+$blue: blue;
+  $blue-light: lightblue;
+  $blue-shadow: navy;
+.tree{
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: green;
+}  
+.light{
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  @include  gradient-background($blue,$blue-shadow, $blue-light);
+}
